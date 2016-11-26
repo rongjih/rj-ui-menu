@@ -28,8 +28,9 @@
   "scripts": {
     "clean": "rm -rf dist",
     "server": "node scripts/http.server.js",
+    "livereload": "livereload 'dist, demo' -e 'js css html json'",
     "watch": "rollup -c scripts/rollup.config.js -w",
-    "dev": "run-p server watch",
+    "dev": "run-p livereload server watch",
     "build": "cross-env NODE_ENV=production node scripts/rollup.build.js",
     "release": "run-s clean build"
   },
@@ -48,6 +49,7 @@
     "babelrc-rollup": "^3.0.0",
     "cross-env": "^2.0.1",
     "cssnano": "^3.8.0",
+    "livereload": "^0.6.0",
     "npm-run-all": "^3.1.1",
     "postcss-cssnext": "^2.8.0",
     "rollup-plugin-babel": "^2.6.1",
