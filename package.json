@@ -1,22 +1,50 @@
 {
   "name": "rj-ui-menu",
+  "moduleName": "RJUIMenu",
   "version": "0.1.0",
+  "author": { "name": "RJ.Huang", "email": "rongjihuang@gmail.com" },
   "description": "Menu UI base on vue.",
+  "keywords": [
+    "vue",
+    "rj-ui-menu"
+  ],
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
   "main": "dist/rj-ui-menu.umd.js",
   "jsnext:main": "dist/rj-ui-menu.es2015.js",
-  "sourceMap": true,
+  "homepage": "https://github.com/rongjih/rj-ui-menu",
+  "bugs": {
+    "url": "https://github.com/rongjih/rj-ui-menu/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rongjih/rj-ui-menu.git"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "watch": "rollup -c scripts/rollup.config.js -w",
+    "build:dev": "rollup -c scripts/rollup.config.js",
+    "build": "cross-env NODE_ENV=production node scripts/build.rollup.js",
+    "release": "run-s clean build"
+  },
   "dependencies": {
     "koa": "^1.2.4",
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
+    "rollup": "^0.36.4",
     "vue": "^2.1.3"
   },
   "devDependencies": {
     "babel-plugin-external-helpers": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
     "babelrc-rollup": "^3.0.0",
+    "cross-env": "^2.0.1",
     "cssnano": "^3.8.0",
+    "npm-run-all": "^3.1.1",
     "postcss-cssnext": "^2.8.0",
+    "rollup": "^0.36.4",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-commonjs": "^5.0.5",
     "rollup-plugin-html": "^0.2.1",
@@ -25,19 +53,5 @@
     "rollup-plugin-postcss": "^0.2.0",
     "rollup-plugin-uglify": "^1.0.1",
     "rollup-watch": "^2.5.0"
-  },
-  "scripts": {
-    "build": "rollup -c",
-    "watch": "rollup -c -w"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rongjih/rj-ui-menu.git"
-  },
-  "author": "RJ.Huang",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rongjih/rj-ui-menu/issues"
-  },
-  "homepage": "https://github.com/rongjih/rj-ui-menu"
+  }
 }
