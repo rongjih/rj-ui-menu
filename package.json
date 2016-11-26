@@ -2,7 +2,10 @@
   "name": "rj-ui-menu",
   "moduleName": "RJUIMenu",
   "version": "0.1.0",
-  "author": { "name": "RJ.Huang", "email": "rongjihuang@gmail.com" },
+  "author": {
+    "name": "RJ.Huang",
+    "email": "rongjihuang@gmail.com"
+  },
   "description": "Menu UI base on vue.",
   "keywords": [
     "vue",
@@ -24,6 +27,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
+    "server": "node scripts/http.server.js",
     "watch": "rollup -c scripts/rollup.config.js -w",
     "build:dev": "rollup -c scripts/rollup.config.js",
     "build": "cross-env NODE_ENV=production node scripts/build.rollup.js",
@@ -33,6 +37,7 @@
     "koa": "^1.2.4",
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
+    "path": "^0.12.7",
     "rollup": "^0.36.4",
     "vue": "^2.1.3"
   },
