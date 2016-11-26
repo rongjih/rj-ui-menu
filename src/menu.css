@@ -1,0 +1,32 @@
+.rj-ui-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #888;
+  cursor: default;
+  position: relative;
+}
+
+.rj-ui-menu>.item {
+  padding: .25em;
+  display: inline-block;
+  position: relative;
+}
+
+.rj-ui-menu>.item>.rj-ui-menu>.item {
+  display: block;
+}
+
+.rj-ui-menu>.item>.rj-ui-menu {
+  display: none;
+  background-color: #666;
+}
+
+.rj-ui-menu>.item:hover {
+  color: #fff;
+}
+
+.rj-ui-menu>.item:hover>.rj-ui-menu {
+  display: block;
+  position: absolute;
+}

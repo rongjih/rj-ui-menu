@@ -1,0 +1,17 @@
+{
+  // https://babeljs.io/docs/plugins/#presets
+  // latest|es2015|es2016|es2017|react|env (new)
+  "presets": [
+    [
+      "es2015",
+      {
+        // deactivate module transformation
+        "modules": false
+      }
+    ]
+  ],
+  "plugins": [
+    // uses helpers to avoid repeating chunks of code
+    "external-helpers"
+  ]
+}

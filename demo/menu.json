@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "name": "p-menu1",
+    "children": [
+      {
+        "id": "1-1",
+        "name": "sub11"
+      },
+      {
+        "id": "1-2",
+        "name": "sub12"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "p-menu2",
+    "children": [
+      {
+        "id": "2-1",
+        "name": "sub21"
+      },
+      {
+        "id": "2-3",
+        "name": "p-sub23",
+        "children": [
+          {
+            "id": "2-3-1",
+            "name": "sub231"
+          },
+          {
+            "id": "2-3-2",
+            "name": "sub232"
+          },
+          {
+            "id": "2-3-3",
+            "name": "sub233"
+          }
+        ]
+      },
+      {
+        "id": "2-2",
+        "name": "sub22"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "r-menu3"
+  }
+]
