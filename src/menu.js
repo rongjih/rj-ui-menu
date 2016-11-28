@@ -1,5 +1,5 @@
 import tpl from './menu.html';
-import css from './menu.css';
+import styl from './menu.styl';
 
 export default {
   name: 'rj-ui-menu',

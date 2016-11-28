@@ -5,11 +5,15 @@ import nodeResolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import cssnext from 'postcss-cssnext';
+import scss from 'postcss-scss';
 import cssnano from 'cssnano';
+// https://github.com/thgh/rollup-plugin-css-only
+import css from 'rollup-plugin-css-only'
 // https://github.com/rollup/rollup-plugin-babel
 const babel = require('rollup-plugin-babel');
 // https://github.com/TrySound/rollup-plugin-uglify
 const uglify = require('rollup-plugin-uglify');
+import stylus from './rollup-plugin-rj-stylus';
 
 const meta = require('../package.json');
 const external = Object.keys(meta.dependencies)
@@ -69,9 +73,12 @@ export const baseConfig = {
     // https://github.com/rollup/rollup-plugin-commonjs
     // Convert CommonJS modules to ES6, so they can be included in a Rollup bundle
     commonjs(),
+    stylus(),
+    // css({ include: ['**/*.css', '**/*.styl'], output: 'dist/css-only.css' }),
     // https://github.com/egoist/rollup-plugin-postcss
     postcss({
-      extensions: ['.css'],
+      include: ['**/*.css', '**/*.styl'],
+      extensions: ['.css', '.styl'],
       plugins: [
         cssnext({ warnForDuplicates: false }),
         cssnano()
